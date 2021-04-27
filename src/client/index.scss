@@ -1,0 +1,11 @@
+@import "~typeface-roboto/index.css";
+@import "~@osjs/client/dist/main.css";
+@import "~@osjs/gui/dist/main.css";
+@import "~@osjs/dialogs/dist/main.css";
+@import "~@osjs/panels/dist/main.css";
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
