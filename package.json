@@ -1,0 +1,90 @@
+{
+  "name": "@jsos/jsos",
+  "version": "3.1.11",
+  "description": "jsos",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run eslint && npm run stylelint",
+    "eslint": "eslint 'src/client/**/*.js' 'src/server/**/*.js'",
+    "stylelint": "stylelint 'src/client/*.scss'",
+    "serve": "node src/server/index.js",
+    "build:manifest": "osjs-cli package:discover",
+    "package:discover": "osjs-cli package:discover",
+    "package:create": "osjs-cli package:create",
+    "make:auth": "osjs-cli make:auth",
+    "make:settings": "osjs-cli make:settings",
+    "make:vfs": "osjs-cli make:vfs",
+    "make:application": "osjs-cli make:application",
+    "make:iframe-application": "osjs-cli make:iframe-application",
+    "make:provider": "jsos-cli make:provider",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "jsos"
+  ],
+  "author": "krishpranav",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "@osjs/dev-meta": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.4"
+  },
+  "dependencies": {
+    "@jsos/calculator-application": "^1.2.8",
+    "@jsos/cli": "^3.0.28",
+    "@jsos/client": "^3.6.3",
+    "@jsos/dialogs": "^3.0.22",
+    "@jsos/draw-application": "^1.2.12",
+    "@jsos/filemanager-application": "^1.5.2",
+    "@jsos/freedesktop-sounds": "^3.0.3",
+    "@jsos/gnome-icons": "^4.0.5",
+    "@jsos/gui": "^4.0.35",
+    "@jsos/htmlviewer-application": "^1.2.6",
+    "@jsos/musicplayer-application": "^1.2.8",
+    "@jsos/panels": "^3.0.31",
+    "@jsos/preview-application": "^1.1.17",
+    "@jsos/server": "^3.1.18",
+    "@jsos/settings-application": "^1.1.8",
+    "@jsos/standard-theme": "^4.0.9",
+    "@jsos/textpad-application": "^1.2.7",
+    "hyperapp": "^1.2.10",
+    "typeface-roboto": "0.0.75"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishpranav/js-os.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krishpranav/js-os/issues"
+  },
+  "homepage": "krishpranav.github.io",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 8
+    },
+    "extends": "@osjs/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@jsos/stylelint-config"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {}
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  }
+}
