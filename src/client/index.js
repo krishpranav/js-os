@@ -10,29 +10,29 @@ import {
     NotificationServiceProvider,
     SettingsServiceProvider,
     AuthServiceProvider
-} from '@osjs/client';
+} from '@jsos/client';
 
-import {PanelServiceProvider} from '@osjs/panels';
-import {GUIServiceProvider} from '@osjs/gui';
-import {DialogServiceProvider} from '@osjs/dialogs';
+import {PanelServiceProvider} from '@jsos/panels';
+import {GUIServiceProvider} from '@jsos/gui';
+import {DialogServiceProvider} from '@jsos/dialogs';
 import config from './config.js';
 import './index.scss';
 
 const init = () => {
-    const osjs = new Core(config, {});
+    const jsos = new Core(config, {});
 
     // register your service providersw
-    osjs.register(CoreServiceProvider);
-    osjs.register(DesktopServiceProvider);
-    osjs.register(VFSServiceProvider);
-    osjs.register(NotificationServiceProvider);
-    osjs.register(SettingsServiceProvider, {before: true});
-    osjs.register(AuthServiceProvider, {before: true});
-    osjs.register(PanelServiceProvider);
-    osjs.register(DialogServiceProvider);
-    osjs.register(GUIServiceProvider);
+    jsos.register(CoreServiceProvider);
+    jsos.register(DesktopServiceProvider);
+    jsos.register(VFSServiceProvider);
+    jsos.register(NotificationServiceProvider);
+    jsos.register(SettingsServiceProvider, {before: true});
+    jsos.register(AuthServiceProvider, {before: true});
+    jsos.register(PanelServiceProvider);
+    jsos.register(DialogServiceProvider);
+    jsos.register(GUIServiceProvider);
 
-    osjs.boot();
+    jsos.boot();
 };
 
 window.addEventListener('DOMContentLoader', () => init());
